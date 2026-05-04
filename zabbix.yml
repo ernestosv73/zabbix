@@ -1,8 +1,8 @@
-name: gnmi-comparativa
+name: zabbix-comparativa
 
 mgmt:
-  network: gnmi
-  ipv4-subnet: 172.110.110.0/24  
+  network: zabbix-network
+  ipv4-subnet: 172.120.120.0/24  
   
 topology:
   nodes:
@@ -86,15 +86,7 @@ topology:
         - ip -6 route add default via 2001:db8:dc::1
     
           
-    gNMIc:
-      kind: linux
-      image: docker.io/esanchezv/hellt-gnmic:latest
-      binds:
-        - configs/gnmic-config.yml:/gnmic-config.yml:ro
-      exec: 
-        - mkdir /data
-        - chmod +x /data
-        
+         
             
     
   links:
