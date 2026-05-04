@@ -29,7 +29,7 @@ topology:
 
     prometheus:
       kind: linux
-      mgmt-ipv4: 172.110.110.42
+      mgmt-ipv4: 172.120.120.42
       image: quay.io/prometheus/prometheus:v2.54.1
       binds:
         - config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
@@ -39,7 +39,7 @@ topology:
 
     grafana:
       kind: linux
-      mgmt-ipv4: 172.110.110.43
+      mgmt-ipv4: 172.120.120.43
       image: grafana/grafana:latest
       binds:
         - config/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
